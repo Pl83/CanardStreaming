@@ -43,9 +43,9 @@ if ($_POST) {
     if ($user->verify()) {
       // save in database
       $connection = new Connection();
-      $connection->insertU($user);
+      $result = $connection->insertU($user);
       $user->password = md5($user->password . 'SALT');
-
+      header('Location: login.php');
     } else {
       echo ' Form has an error';}
 }
