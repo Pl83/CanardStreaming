@@ -7,7 +7,7 @@ class User
     public string $password,
     public string $password2,
     public string $firstname,
-    public string $lastname,
+
   )
   {
   }
@@ -16,7 +16,7 @@ class User
   {
     $isValid = true;
 
-    if ($this->email === '' || $this->firstname === '' || $this->lastname === '') {
+    if ($this->email === '' || $this->firstname === '') {
       $isValid = false;
     }
     if ($this->password === '' || $this->password !== $this->password2) {

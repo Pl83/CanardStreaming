@@ -17,7 +17,6 @@ require_once 'User.php';
 <form method="POST">
   <h2>Inscrivez-vous</h2>
   <p>Votre prenom<input type="text" name="firstname"></p>
-  <p>Votre nom<input type="text" name="lastname"></p>
   <p>Votre adresse mail<input type="email" name="email"></p>
   <p>Votre mot de passe<input type="password" name="password"></p>
   <p>Confirmez votre mot de passe<input type="password" name="password2"></p>
@@ -38,7 +37,7 @@ if ($_POST) {
       $_POST['password'],
       $_POST['password2'],
       $_POST['firstname'],
-      $_POST['lastname'],
+
     );
     if ($user->verify()) {
       // save in database

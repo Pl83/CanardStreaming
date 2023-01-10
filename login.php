@@ -1,6 +1,7 @@
 <?php
 require_once 'Connection.php';
 require_once 'User.php';
+session_start();
 ?>
 <!doctype html>
 <html lang="en">
@@ -23,8 +24,6 @@ require_once 'User.php';
 </body>
 </html>
 <?php
-
-
 if ($_POST) {
   $connection = new Connection();
 //print_r(md5($_POST['password'] . 'SALT'));
@@ -36,3 +35,4 @@ if ($_POST) {
   $_SESSION['user'] = $try;
   $_SESSION['id'] = $try['id'];
 }
+
